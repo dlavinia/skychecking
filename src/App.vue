@@ -1,13 +1,16 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <FooterApp></FooterApp>
+  <Card></Card>
 </template>
 
 <script>
 import FooterApp from './components/FooterApp.vue';
+import Card from './components/Card.vue';
 export default {
   name: 'App',
   components: {
+    Card,
     FooterApp
   }
 }
