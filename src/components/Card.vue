@@ -1,33 +1,21 @@
 <template>
-    <section class="parceiros">    
-        <h2> {{ listItems.name }} </h2>
-    </section>
-
+    <div v-if="currentData" class="w-100 p-3 text-light">
+        <h1 class="display-3 mb-0">{{ currentTemperature }}°C</h1>
+        <span class="text-light opacity-75">{{ currentData.weather[0].description }}</span>
+    </div>
 </template>
+
 <script>
 export default {
-  name: 'ParceirosListing',
-  data() {
-    return {
-      listItems : Object
-    }
-  },
-  methods: {
+    name:'CardTemp',
 
-    async getData() {
-      const res = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Natal,BR&appid=465af90b1540b9ff8c6e6e5aa5fe175d&units=metric&lang=pt_br");
-      const finalRes = await res.json();
-      this.listItems = finalRes;
-      console.log(finalRes)
+    props: {
+        currentData: Object
     },
-
-  },
-  mounted() {
-    this.getData()
-  }
+    computed: {
+        currentTemperature() {
+            return Math.round(this.currentData.main.temp)
+        }
+    }
 }
-
 </script>
-<style scoped>
-
-</style>

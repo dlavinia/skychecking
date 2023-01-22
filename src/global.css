@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.search-bar {
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border-radius: 70px;
+    border: none;
+    padding: 10px 14px;
+    font-size: 25px;
+    color: #88BBBB;
+}
+
+.clear{
+    background-image: url('@/assets/clear.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+}
