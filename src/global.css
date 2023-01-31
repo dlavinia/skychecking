@@ -2,6 +2,13 @@
     padding: 0;
     margin: 0;
 }
+
+.search-box{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .search-bar {
     background: #FFFFFF;
     mix-blend-mode: normal;
@@ -9,13 +16,15 @@
     border: none;
     padding: 10px 14px;
     font-size: 25px;
-    color: #88BBBB;
+    color: #105fb9;
+    width: 80%;
 }
 
 .clear{
     background-image: url('@/assets/clear.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-color: #105fb93a;
+    background-blend-mode: multiply; 
     height: 100vh;
 }
